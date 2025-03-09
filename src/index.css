@@ -100,19 +100,19 @@ html {
 /* Custom component classes */
 @layer components {
   .marina-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-6xl mx-auto px-3 sm:px-4 lg:px-5; /* Reduced padding from previous values */
   }
 
   .marina-section {
-    @apply py-16 md:py-24;
+    @apply py-12 md:py-16; /* Reduced vertical padding from py-16 md:py-24 */
   }
 
   .marina-button-primary {
-    @apply bg-marina-teal hover:bg-marina-blue text-white font-semibold py-3 px-6 rounded-md transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 animate-glow;
+    @apply bg-marina-teal hover:bg-marina-blue text-white font-semibold py-2 px-5 rounded-md transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 animate-glow;
   }
 
   .marina-button-secondary {
-    @apply bg-transparent hover:bg-marina-teal/10 text-marina-teal border border-marina-teal font-semibold py-3 px-6 rounded-md transition-all duration-300;
+    @apply bg-transparent hover:bg-marina-teal/10 text-marina-teal border border-marina-teal font-semibold py-2 px-5 rounded-md transition-all duration-300;
   }
 
   .marina-card {
@@ -128,7 +128,7 @@ html {
   }
 
   .marina-grid {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8;
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5; /* Reduced gap from gap-6 md:gap-8 */
   }
 
   .circuit-pattern {

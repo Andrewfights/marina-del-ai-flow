@@ -13,9 +13,13 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: '1rem', // Reduced from 2rem
 			screens: {
-				'2xl': '1400px'
+				'sm': '540px',  // Added smaller breakpoint
+				'md': '720px',  // Reduced from default
+				'lg': '960px',  // Reduced from default
+				'xl': '1140px', // Reduced from default
+				'2xl': '1240px' // Reduced from 1400px
 			}
 		},
 		extend: {
