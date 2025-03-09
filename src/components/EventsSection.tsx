@@ -102,6 +102,16 @@ const events: Event[] = [
     description: "Exploring how AI-powered underwater drones, ROVs, and deep-sea AI tools are changing ocean exploration, marine archaeology, and oceanography.",
     image: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?q=80&w=1000&auto=format&fit=crop",
     link: "#"
+  },
+  {
+    id: 4,
+    title: "AI-Driven Smart Harbors & Autonomous Vessels ⚓",
+    date: "TBD",
+    time: "10:00 AM - 5:00 PM",
+    location: "Marina del Rey Marine Innovation Center",
+    description: "Exploring how AI is revolutionizing harbors, vessel logistics, and autonomous ships with the latest innovations in smart maritime technology.",
+    image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?q=80&w=1000&auto=format&fit=crop",
+    link: "#"
   }
 ];
 
