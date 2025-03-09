@@ -17,9 +17,13 @@ const EventCard = ({ event }: { event: Event }) => {
           alt={event.title} 
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
-        {daysRemaining > 0 && (
+        {daysRemaining > 0 && event.date !== "TBD" ? (
           <div className="absolute top-4 right-4 bg-marina-teal text-white text-sm font-semibold py-1 px-3 rounded-full z-20">
             In {daysRemaining} days
+          </div>
+        ) : event.date === "TBD" && (
+          <div className="absolute top-4 right-4 bg-marina-teal text-white text-sm font-semibold py-1 px-3 rounded-full z-20">
+            Date TBD
           </div>
         )}
       </div>
@@ -29,7 +33,7 @@ const EventCard = ({ event }: { event: Event }) => {
         
         <div className="flex items-center text-gray-600 dark:text-gray-300 mb-2">
           <Calendar className="h-4 w-4 mr-2 text-marina-teal" />
-          <span className="text-sm">{new Date(event.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+          <span className="text-sm">{event.date === "TBD" ? "Date to be determined" : new Date(event.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
         </div>
         
         <div className="flex items-center text-gray-600 dark:text-gray-300 mb-2">
@@ -91,12 +95,12 @@ const events: Event[] = [
   },
   {
     id: 3,
-    title: "Hackathon: AI for Ocean Conservation",
-    date: "2024-02-10",
+    title: "AI & the Deep Sea: Robotics & Exploration 🤖",
+    date: "TBD",
     time: "9:00 AM - 8:00 PM",
     location: "Marina del Rey Tech Campus",
-    description: "A 24-hour coding challenge to develop AI solutions for pressing ocean conservation problems.",
-    image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?q=80&w=1000&auto=format&fit=crop",
+    description: "Exploring how AI-powered underwater drones, ROVs, and deep-sea AI tools are changing ocean exploration, marine archaeology, and oceanography.",
+    image: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?q=80&w=1000&auto=format&fit=crop",
     link: "#"
   }
 ];
