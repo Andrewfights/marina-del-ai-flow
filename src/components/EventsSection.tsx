@@ -67,7 +67,7 @@ interface Event {
   link: string;
 }
 
-// Sample events data
+// Sample events data with updated ocean/blue tech related images
 const events: Event[] = [
   {
     id: 1,
@@ -76,7 +76,7 @@ const events: Event[] = [
     time: "10:00 AM - 3:00 PM",
     location: "Marina del Rey Tech Hub",
     description: "Learn how AI is transforming ocean data collection and analysis with hands-on workshops and expert presentations.",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1000&auto=format&fit=crop",
     link: "#"
   },
   {
@@ -86,7 +86,7 @@ const events: Event[] = [
     time: "9:00 AM - 6:00 PM",
     location: "Marina del Rey Convention Center",
     description: "Join leading innovators, startups, and investors to explore the future of sustainable ocean technology.",
-    image: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=1000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?q=80&w=1000&auto=format&fit=crop",
     link: "#"
   },
   {
@@ -96,7 +96,7 @@ const events: Event[] = [
     time: "9:00 AM - 8:00 PM",
     location: "Marina del Rey Tech Campus",
     description: "A 24-hour coding challenge to develop AI solutions for pressing ocean conservation problems.",
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?q=80&w=1000&auto=format&fit=crop",
     link: "#"
   }
 ];

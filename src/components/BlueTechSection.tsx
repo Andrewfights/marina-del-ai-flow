@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -24,21 +23,21 @@ const innovations: Innovation[] = [
     title: "Smart Marine Conservation Drones",
     company: "EcoWatch Systems",
     description: "Autonomous drones that use AI to identify endangered species, illegal fishing activities, and coral reef damage from above.",
-    image: "https://images.unsplash.com/photo-1510146621401-6519c577d8d1?q=80&w=1000&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?q=80&w=1000&auto=format&fit=crop"
   },
   {
     id: 3,
     title: "Sustainable Maritime Technology",
     company: "GreenWave Propulsion",
     description: "AI-optimized propulsion systems that reduce fuel consumption and emissions while maximizing efficiency for commercial vessels.",
-    image: "https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?q=80&w=1000&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?q=80&w=1000&auto=format&fit=crop"
   },
   {
     id: 4,
     title: "Predictive Ocean Current Modeling",
     company: "FlowCast Technologies",
     description: "Machine learning algorithms that predict ocean currents, helping shipping companies optimize routes and reduce carbon footprint.",
-    image: "https://images.unsplash.com/photo-1498922124352-a16107828369?q=80&w=1000&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1000&auto=format&fit=crop"
   }
 ];
 
