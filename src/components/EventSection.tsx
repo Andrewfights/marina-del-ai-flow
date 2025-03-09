@@ -23,6 +23,7 @@ const EventSection = () => {
     <section id="event" className="marina-section bg-ocean-gradient text-white">
       {/* Background patterns */}
       <div className="absolute inset-0 circuit-pattern opacity-10"></div>
+      {/* This div creates the ocean wave animation effect */}
       <div className="absolute inset-0 bg-wave-pattern opacity-5 animate-wave"></div>
       
       <div className="marina-container relative z-10">

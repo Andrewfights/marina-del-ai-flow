@@ -11,7 +11,7 @@ const HeroSection = () => {
       {/* Circuit pattern overlay */}
       <div className="absolute inset-0 circuit-pattern opacity-20"></div>
       
-      {/* Wave pattern */}
+      {/* Wave pattern - This creates the ocean wave animation effect */}
       <div className="absolute inset-0 bg-wave-pattern opacity-10 animate-wave"></div>
       
       <div className="marina-container relative z-10">
