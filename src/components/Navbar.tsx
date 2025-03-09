@@ -23,6 +23,23 @@ const Navbar = () => {
     };
   }, []);
 
+  // Add smooth scrolling for anchor links
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+    
+    const element = document.querySelector(target);
+    if (element) {
+      window.scrollTo({
+        top: element.getBoundingClientRect().top + window.pageYOffset - 80, // Adjust offset to prevent text cut-off
+        behavior: "smooth"
+      });
+      
+      // Update URL without page jump
+      window.history.pushState(null, "", target);
+    }
+  };
+
   const navLinks = [
     { name: "Home", href: "#home" },
     { name: "Upcoming Events", href: "#events" },
@@ -59,12 +76,18 @@ const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 className="font-medium text-white hover:text-marina-cyan transition-colors duration-300"
+                onClick={(e) => handleAnchorClick(e, link.href)}
               >
                 {link.name}
               </a>
             ))}
             <Button asChild className="marina-button-primary ml-4">
-              <Link to="/#signup">Join the Movement</Link>
+              <a 
+                href="#signup" 
+                onClick={(e) => handleAnchorClick(e, "#signup")}
+              >
+                Join the Movement
+              </a>
             </Button>
           </div>
 
@@ -92,7 +115,7 @@ const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   className="block font-medium text-gray-700 dark:text-gray-200 hover:text-marina-teal dark:hover:text-marina-cyan px-3 py-2 rounded-md transition-colors duration-300"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => handleAnchorClick(e, link.href)}
                 >
                   {link.name}
                 </a>
@@ -100,9 +123,13 @@ const Navbar = () => {
               <Button
                 asChild
                 className="marina-button-primary w-full mt-4"
-                onClick={() => setIsMenuOpen(false)}
               >
-                <Link to="/#signup">Join the Movement</Link>
+                <a 
+                  href="#signup"
+                  onClick={(e) => handleAnchorClick(e, "#signup")}
+                >
+                  Join the Movement
+                </a>
               </Button>
             </div>
           </div>
