@@ -57,7 +57,7 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="font-medium text-gray-700 dark:text-gray-200 hover:text-marina-teal dark:hover:text-marina-cyan transition-colors duration-300"
+                className="font-medium text-white hover:text-marina-cyan transition-colors duration-300"
               >
                 {link.name}
               </a>
@@ -71,7 +71,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 dark:text-gray-200 hover:text-marina-teal dark:hover:text-marina-cyan focus:outline-none"
+              className="text-white hover:text-marina-cyan focus:outline-none"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
