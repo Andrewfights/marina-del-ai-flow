@@ -76,9 +76,9 @@ const events: Event[] = [
   {
     id: 1,
     title: "AI & Ocean Data Workshop",
-    date: "2023-12-15",
+    date: "TBD",
     time: "10:00 AM - 3:00 PM",
-    location: "Marina del Rey Tech Hub",
+    location: "Marina del Rey, CA",
     description: "Learn how AI is transforming ocean data collection and analysis with hands-on workshops and expert presentations.",
     image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1000&auto=format&fit=crop",
     link: "#"
@@ -86,9 +86,9 @@ const events: Event[] = [
   {
     id: 2,
     title: "Blue Tech Innovation Summit",
-    date: "2024-01-20",
+    date: "TBD",
     time: "9:00 AM - 6:00 PM",
-    location: "Marina del Rey Convention Center",
+    location: "Marina del Rey, CA",
     description: "Join leading innovators, startups, and investors to explore the future of sustainable ocean technology.",
     image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?q=80&w=1000&auto=format&fit=crop",
     link: "#"
@@ -98,7 +98,7 @@ const events: Event[] = [
     title: "AI & the Deep Sea: Robotics & Exploration 🤖",
     date: "TBD",
     time: "9:00 AM - 8:00 PM",
-    location: "Marina del Rey Tech Campus",
+    location: "Marina del Rey, CA",
     description: "Exploring how AI-powered underwater drones, ROVs, and deep-sea AI tools are changing ocean exploration, marine archaeology, and oceanography.",
     image: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?q=80&w=1000&auto=format&fit=crop",
     link: "#"
@@ -108,7 +108,7 @@ const events: Event[] = [
     title: "AI-Driven Smart Harbors & Autonomous Vessels ⚓",
     date: "TBD",
     time: "10:00 AM - 5:00 PM",
-    location: "Marina del Rey Marine Innovation Center",
+    location: "Marina del Rey, CA",
     description: "Exploring how AI is revolutionizing harbors, vessel logistics, and autonomous ships with the latest innovations in smart maritime technology.",
     image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?q=80&w=1000&auto=format&fit=crop",
     link: "#"

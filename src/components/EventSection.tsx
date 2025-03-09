@@ -1,21 +1,15 @@
 
-import { Calendar, Clock, MapPin, Users, Star } from "lucide-react";
+import { Calendar, Clock, MapPin, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const EventSection = () => {
   // Event details
   const event = {
-    title: "Marina del rAI Main Event 2024",
-    date: "June 15-16, 2024",
+    title: "Marina del rAI Launch Event 2024",
+    date: "May 27, 2024",
     time: "9:00 AM - 6:00 PM",
-    location: "Marina del Rey Convention Center",
+    location: "Marina del Rey, CA",
     theme: "AI Solutions for Ocean Sustainability",
-    speakers: [
-      "Dr. Elizabeth Morgan - Ocean AI Research Lead, Stanford",
-      "Alex Chen - CEO, DeepBlue Analytics",
-      "Maria Suarez - Marine Conservation Technologist",
-      "Dr. James Wilson - Author, 'Future Oceans: AI & Conservation'"
-    ],
     highlights: [
       "Keynote: The Future of AI in Ocean Conservation",
       "Panel: Sustainable Tech for Cleaner Oceans",
@@ -34,11 +28,11 @@ const EventSection = () => {
       <div className="marina-container relative z-10">
         <div className="text-center mb-16">
           <div className="inline-block bg-white/10 backdrop-blur-sm text-marina-cyan font-semibold py-1 px-4 rounded-full text-sm mb-4">
-            June 15-16, 2024
+            Tuesday, May 27, 2024
           </div>
           
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Marina del rAI Main Event 🎉
+            Marina del rAI Launch Event 🎉
           </h2>
           
           <p className="text-xl text-marina-light/90 max-w-3xl mx-auto">
@@ -89,25 +83,6 @@ const EventSection = () => {
           
           {/* Event Program Column */}
           <div className="space-y-8">
-            {/* Key Speakers */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <div className="flex items-center mb-6">
-                <Users className="h-6 w-6 text-marina-cyan mr-3" />
-                <h3 className="text-2xl font-bold text-marina-cyan">Key Speakers</h3>
-              </div>
-              
-              <ul className="space-y-3">
-                {event.speakers.map((speaker, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="h-6 w-6 bg-marina-teal/20 rounded-full flex items-center justify-center text-marina-cyan text-sm mr-3 mt-0.5">
-                      {index + 1}
-                    </span>
-                    <span className="text-marina-light/90">{speaker}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
             {/* Agenda Highlights */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold mb-6 text-marina-cyan">Agenda Highlights</h3>
@@ -123,6 +98,14 @@ const EventSection = () => {
                 ))}
               </ul>
             </div>
+            
+            {/* Speaker Announcement Note */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-3 text-marina-cyan">Speakers</h3>
+              <p className="text-marina-light/90">
+                Our exciting speaker lineup will be announced soon! Stay tuned for updates on industry experts and thought leaders who will be joining us.
+              </p>
+            </div>
           </div>
         </div>
         
@@ -131,7 +114,7 @@ const EventSection = () => {
           <div className="max-w-3xl mx-auto bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20">
             <h3 className="text-2xl font-bold mb-3 text-marina-cyan">Ready to join us?</h3>
             <p className="text-marina-light/90 mb-6">
-              Secure your spot at the Marina del rAI Main Event. Early bird tickets available until May 1st.
+              Secure your spot at the Marina del rAI Launch Event. Early bird tickets available until May 1st.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
