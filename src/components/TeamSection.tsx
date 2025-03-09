@@ -1,119 +1,6 @@
 
-import { Linkedin, Twitter, Award, Briefcase } from "lucide-react";
-
-interface TeamMember {
-  id: number;
-  name: string;
-  role: string;
-  bio: string;
-  image: string;
-  linkedin?: string;
-  twitter?: string;
-}
-
-// Updated team members with Andrew as the founder
-const teamMembers: TeamMember[] = [
-  {
-    id: 2,
-    name: "Dr. Sophia Chen",
-    role: "AI Director",
-    bio: "Former MIT AI researcher with 10+ years of experience in machine learning. Leading our AI strategy for ocean conservation.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop",
-    linkedin: "#",
-    twitter: "#"
-  },
-  {
-    id: 3,
-    name: "Marcus Johnson",
-    role: "Marine Technology Lead",
-    bio: "Marine biologist and tech innovator developing AI-powered systems for underwater monitoring and conservation.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop",
-    linkedin: "#",
-    twitter: "#"
-  },
-  {
-    id: 4,
-    name: "Elena Rodríguez",
-    role: "Community & Events Manager",
-    bio: "Experienced community builder connecting technologists, ocean advocates, and entrepreneurs to create sustainable solutions.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1000&auto=format&fit=crop",
-    linkedin: "#"
-  },
-  {
-    id: 5,
-    name: "James Wilson",
-    role: "Sustainable Business Advisor",
-    bio: "Former tech executive now focused on helping ocean-tech startups build sustainable, profitable business models.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1000&auto=format&fit=crop",
-    twitter: "#"
-  },
-  {
-    id: 6,
-    name: "Dr. Aisha Patel",
-    role: "Data Science Researcher",
-    bio: "Leading our ocean data initiatives and developing models to predict climate impact on marine ecosystems.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop",
-    linkedin: "#",
-    twitter: "#"
-  },
-  {
-    id: 7,
-    name: "Thomas Zhang",
-    role: "Technical Partnership Lead",
-    bio: "Building bridges between AI researchers, tech companies, and marine science institutions to drive innovation.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop",
-    linkedin: "#"
-  }
-];
-
-const TeamMemberCard = ({ member }: { member: TeamMember }) => {
-  return (
-    <div className="marina-card h-full flex flex-col">
-      <div className="p-6 flex-grow">
-        <div className="flex items-start mb-4">
-          <div className="mr-4">
-            <div className="h-16 w-16 rounded-full overflow-hidden border-2 border-marina-teal/30">
-              <img 
-                src={member.image} 
-                alt={member.name} 
-                className="h-full w-full object-cover"
-              />
-            </div>
-          </div>
-          <div>
-            <h3 className="text-xl font-bold text-marina-blue dark:text-marina-cyan">{member.name}</h3>
-            <p className="text-marina-teal font-medium">{member.role}</p>
-          </div>
-        </div>
-        
-        <p className="text-gray-700 dark:text-gray-300 mb-4">{member.bio}</p>
-      </div>
-      
-      {(member.linkedin || member.twitter) && (
-        <div className="border-t border-gray-200 dark:border-gray-700 p-4 flex justify-end space-x-3">
-          {member.linkedin && (
-            <a 
-              href={member.linkedin} 
-              className="text-gray-500 hover:text-marina-teal transition-colors"
-              aria-label={`${member.name}'s LinkedIn profile`}
-            >
-              <Linkedin className="h-5 w-5" />
-            </a>
-          )}
-          {member.twitter && (
-            <a 
-              href={member.twitter} 
-              className="text-gray-500 hover:text-marina-teal transition-colors"
-              aria-label={`${member.name}'s Twitter profile`}
-            >
-              <Twitter className="h-5 w-5" />
-            </a>
-          )}
-        </div>
-      )}
-    </div>
-  );
-};
+import { Linkedin, Twitter, Award, Briefcase, HandshakeIcon } from "lucide-react";
+import { Button } from "./ui/button";
 
 const TeamSection = () => {
   return (
@@ -121,11 +8,10 @@ const TeamSection = () => {
       <div className="marina-container">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-marina-blue dark:text-marina-cyan">
-            Meet the Innovators Behind Marina del rAI
+            Leadership & Partnerships
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Our diverse team of AI researchers, marine experts, and community builders are
-            working together to create technological solutions for a sustainable ocean future.
+            Building a future where technology and the coast converge to inspire groundbreaking advancements.
           </p>
         </div>
         
@@ -192,10 +78,44 @@ const TeamSection = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {teamMembers.map((member) => (
-            <TeamMemberCard key={member.id} member={member} />
-          ))}
+        {/* Partnership Section */}
+        <div className="mb-16 rounded-2xl overflow-hidden bg-gradient-to-br from-marina-blue/5 to-marina-teal/10 border border-marina-teal/20 p-6 md:p-8">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-4">
+              <div className="flex items-center mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-marina-teal mr-2">
+                  <path d="M10.05 4.575a1.575 1.575 0 1 0-3.15 0v3.15a1.575 1.575 0 1 0 3.15 0v-3.15z" />
+                  <path d="M13.875 2.25c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125v-9.75c0-.621.504-1.125 1.125-1.125h9.75z" />
+                  <path d="M22.5 10.5v2.25a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25v-8.25a2.25 2.25 0 0 1 2.25-2.25h3.542a7.348 7.348 0 0 1-.542-2.25H3.375A3.375 3.375 0 0 0 0 5.625v10.5A3.375 3.375 0 0 0 3.375 19.5h17.25a3.375 3.375 0 0 0 3.375-3.375v-2.25z" />
+                </svg>
+                <span className="text-marina-teal font-semibold">Strategic Partner</span>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-marina-blue dark:text-marina-cyan">AILA</h3>
+              <p className="text-gray-700 dark:text-gray-300">
+                AILA (Artificial Intelligence LA) is a premier organization dedicated to advancing AI technology 
+                and fostering collaboration within Los Angeles' dynamic tech ecosystem. As a strategic partner of 
+                Marina del rAI, AILA brings its extensive network and expertise to help bridge the worlds of 
+                artificial intelligence and ocean sustainability.
+              </p>
+              <p className="text-gray-700 dark:text-gray-300">
+                This partnership enables exciting new opportunities for innovation, research, and community building 
+                at the intersection of AI and ocean technologies in the Marina del Rey area.
+              </p>
+              <div className="pt-4">
+                <Button variant="outline" className="border-marina-teal text-marina-teal hover:bg-marina-teal/10">
+                  Learn More About AILA
+                </Button>
+              </div>
+            </div>
+            <div className="flex justify-center items-center">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 w-full max-w-md aspect-video flex items-center justify-center">
+                <div className="text-center">
+                  <h4 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-marina-blue to-marina-teal mb-2">AILA</h4>
+                  <p className="text-lg text-gray-600 dark:text-gray-400">Artificial Intelligence LA</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         
         <div className="mt-12 text-center">
@@ -203,7 +123,7 @@ const TeamSection = () => {
             href="#contact" 
             className="inline-flex items-center text-marina-teal hover:text-marina-blue dark:hover:text-marina-cyan transition-colors font-medium"
           >
-            <span>Want to join our team? Get in touch</span>
+            <span>Interested in partnering with us? Get in touch</span>
             <svg className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
