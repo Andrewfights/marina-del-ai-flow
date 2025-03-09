@@ -46,7 +46,7 @@ const TeamSection = () => {
               <p className="text-gray-700 dark:text-gray-300">
                 A seasoned tech innovator, product manager, and entrepreneur with a deep passion for artificial intelligence and media. 
                 With a background spanning AI-driven video editing, live event production, and streaming technology, 
-                he has played a key role in shaping cutting-edge products at companies like Pluto TV, Telly, and ElevenLabs.
+                he has played a key role in shaping cutting-edge products at companies like Pluto TV, Paramount, Telly, Glow, and Ruffcut.
               </p>
               <p className="text-gray-700 dark:text-gray-300">
                 As the founder of Marina del rAI, Andrew brings together the worlds of AI innovation and oceanic sustainability, 
