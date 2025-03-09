@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 interface Innovation {
   id: number;
@@ -126,10 +127,10 @@ const BlueTechSection = () => {
             </div>
             
             <Button asChild className="marina-button-primary group">
-              <a href="#">
+              <Link to="/bluetech">
                 Explore Blue Tech
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </Button>
           </div>
           

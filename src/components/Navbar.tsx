@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,11 +45,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#home" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <span className="text-xl md:text-2xl font-montserrat font-bold bg-gradient-to-r from-marina-blue via-marina-teal to-marina-cyan bg-clip-text text-transparent">
                 Marina del rAI
               </span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -62,8 +63,8 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button className="marina-button-primary ml-4">
-              Join the Movement
+            <Button asChild className="marina-button-primary ml-4">
+              <Link to="/#signup">Join the Movement</Link>
             </Button>
           </div>
 
@@ -97,10 +98,11 @@ const Navbar = () => {
                 </a>
               ))}
               <Button
+                asChild
                 className="marina-button-primary w-full mt-4"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Join the Movement
+                <Link to="/#signup">Join the Movement</Link>
               </Button>
             </div>
           </div>
